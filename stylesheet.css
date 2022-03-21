@@ -91,13 +91,13 @@ tr.category>td{
 
 /*Publication Info Format*/
 .pub-image {
-  padding-left: 4%;
+  padding-left: 3%;
   width: 35%;
   vertical-align: middle;
 }
 
 .pub-image img {
-  width: 85%;
+  width: 90%;
   text-align: center;
 }
 
