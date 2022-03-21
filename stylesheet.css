@@ -78,8 +78,8 @@ li{
   margin-bottom: 15px;
 }
 
-.category{
-  margin-top: 10px;
+tr.category>td{
+  padding-top: 20px;
 }
 
 .third-bullet{
@@ -91,20 +91,17 @@ li{
 
 /*Publication Info Format*/
 .pub-image {
-  padding-left: 2.5%;
-  padding-right: 2.5%;
+  padding-left: 4%;
   width: 35%;
   vertical-align: middle;
 }
 
 .pub-image img {
-  width: 100%;
-  height: 135px;
-  object-fit: contain;
+  width: 85%;
+  text-align: center;
 }
 
 .pub-contents {
-  padding-right: 10px;
   width: 65%;
   vertical-align: middle;
 }
