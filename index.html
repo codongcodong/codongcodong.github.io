@@ -305,6 +305,37 @@
     </table>
 
     <script>
+        // Update styles based on window.innerWidth
+        function updateStyles() {
+        const navbar = document.querySelector('.navbar');
+        const liElements = navbar.querySelectorAll('li');
+        const buttons = document.querySelectorAll('button');
+        if (window.innerWidth <= 600) {
+            navbar.style.padding = '8px';
+            liElements.forEach(li => {
+                li.style.margin = '0 0px';
+            });
+            buttons.forEach(button => {
+                button.style.fontSize = '12px';
+                button.style.padding = "0px 5px";
+            });
+        } else {
+            navbar.style.padding = '10px';
+            liElements.forEach(li => {
+                li.style.margin = '0 10px';
+            });
+            buttons.forEach(button => {
+                button.style.fontSize = '15px';
+                button.style.padding = "5px 10px";
+            });
+        }
+        }
+
+        // Call the function initially and on window resize
+        updateStyles();
+        window.addEventListener('resize', updateStyles);
+
+        // Powering the navbar with scrollTo
         const navBarHeight = document.querySelector('.navbar').clientHeight+5;
         function scrollToElement(targetText) {
             const contentDivs = document.querySelectorAll('span.section');
