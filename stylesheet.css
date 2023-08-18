@@ -125,6 +125,22 @@ button {
   font-size: 15px;
 }
 
+/* Media query for mobile */
+@media (max-width: 1000px) {
+  button {
+    padding: 0px 5px;
+    font-size: 10px;
+    flex-direction: column; /* Change to vertical layout on mobile */
+  }
+
+  .navbar {
+    padding: 2px;
+  }
+  .navbar li {
+    margin: 0 0px;
+  }
+}
+
 /* Publication Info Format */
 .pub-image {
   padding-left: 3%;
