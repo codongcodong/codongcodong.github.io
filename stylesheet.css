@@ -126,15 +126,15 @@ button {
 }
 
 /* Media query for mobile */
-@media (max-width: 1000px) {
+@media (max-width: 400px) {
   button {
     padding: 0px 5px;
-    font-size: 10px;
+    font-size: 12px;
     flex-direction: column; /* Change to vertical layout on mobile */
   }
 
   .navbar {
-    padding: 2px;
+    padding: 8px;
   }
   .navbar li {
     margin: 0 0px;
