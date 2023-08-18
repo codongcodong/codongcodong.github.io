@@ -311,7 +311,7 @@
         const liElements = navbar.querySelectorAll('li');
         const buttons = document.querySelectorAll('button');
         if (window.innerWidth <= 600) {
-            navbar.style.padding = '8px';
+            navbar.style.padding = '8px 0';
             liElements.forEach(li => {
                 li.style.margin = '0 0px';
             });
@@ -320,7 +320,7 @@
                 button.style.padding = "0px 5px";
             });
         } else {
-            navbar.style.padding = '10px';
+            navbar.style.padding = '10px 0';
             liElements.forEach(li => {
                 li.style.margin = '0 10px';
             });
