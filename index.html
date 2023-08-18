@@ -15,7 +15,17 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <base target="_blank">
 </head>
-<body>
+<body style="margin-top: 30px;">
+    <nav class="navbar">
+        <ul>
+          <li><button onclick="scrollToTop()">About</button></li>
+          <li><button onclick="scrollToElement('Publications')">Publications</button></li>
+          <li><button onclick="scrollToElement('Education')">Education</button></li>
+          <li><button onclick="scrollToElement('Research Projects')">Research</button></li>
+          <li><button onclick="scrollToElement('Honors and Awards')">Honors and Awards</button></li>
+        </ul>
+    </nav>
+
 	<table style="max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         <tr>
           <td>
@@ -46,9 +56,31 @@
           </td>
         </tr>
 
+        <tr class="category">
+            <td>
+                <span style="font-size:20px"><b>Research Interests</b></span><br>
+                <ul>
+                    <li><span style="font-size: 15px;">
+                        <b>Cyber Security</b>
+                    </span></li>
+                    <ul>
+                        <li>web security, data privacy, third-party tracking, encrypted traffic classification</li>
+                    </ul>
+                </ul>
+                <ul>
+                    <li><span style="font-size: 15px;">
+                        <b>User Experience</b>
+                    </span></li>
+                    <ul>
+                        <li>video streaming, enhancing quality of experience (QoE), analyzing and modeling user behavior</li>
+                    </ul>
+                </ul>
+            </td>
+        </tr>
+
         <tr>
             <td style="width:100%">
-                <span style="font-size:20px"><b>Publications</b></span>
+                <span style="font-size:20px" class="section"><b>Publications</b></span>
                 <br>
                 <table style="margin-top: 20px;border:0px;border-spacing:0px;">
                     <tbody>
@@ -65,7 +97,7 @@
                                     (<a href="https://dl.acm.org/doi/10.1145/3543507.3583372">paper</a>,
                                     <a href="pdf/dklee_Net-track_WWW '23.pdf">pdf</a>)
                                 <br>
-                                (Acceptance Rate: 19.2%=365/1900)
+                                (Acceptance Rate: 19.2%=365/1900; <span class="reddy">BK21+ IF: 4</span>)
                                 <br>
                             </td>
                         </tr>
@@ -96,7 +128,7 @@
 
         <tr class="category">
             <td>
-                <span style="font-size:20px"><b>Education</b></span><br>
+                <span style="font-size:20px" class="section"><b>Education</b></span><br>
                 <ul>
                     <li><span style="font-size: 15px; font-weight: bold">
                         Korea University, Seoul, Republic of Korea
@@ -127,7 +159,7 @@
 
         <tr class="category">
             <td>
-                <span style="font-size:20px"><b>Work and Research Experience</b></span><br>
+                <span style="font-size:20px"><b>Work Experience</b></span><br>
                 <ul>
                     <li><span style="font-size: 15px;">
                         <b>R.O.K. Cyber Operations Command</b>, Republic of Korea Armed Forces
@@ -165,10 +197,40 @@
 
         <tr class="category">
             <td>
+                <span style="font-size:20px" class="section"><b>Research Projects</b></span><br>
+                <ul>
+                    <li><span style="font-size: 15px;">
+                        <b>Discovering unknown third-party trackers in the wild</b>
+                    </span></li>
+                    <ul>
+                        <li><b>Keywords: </b>web security, third-party tracking, encrypted traffic analysis, machine learning</li>
+                        <li>Built a high accuracy web tracking detection system, “Net-track”</li>
+                        <li>Implemented Net-track using diverse machine learning models with <b>Scikit-learn</b> and <b>Tensorflow</b></li>
+                        <li>Collected 350k traffic traces by visiting top-20k Alexa websites using <b>Selenium</b></li>
+                        <li>Publications: <a href="https://dl.acm.org/doi/10.1145/3543507.3583372" class="reddy">WWW '23</a></li>
+                    </ul>
+                </ul>
+                <ul>
+                    <li><span style="font-size: 15px;">
+                        <b>Understanding the impact of user engagement on QoE in video streaming</b>
+                    </span></li>
+                    <ul>
+                        <li><b>Keywords: </b>QoE, multimedia, ABR streaming, user modeling</li>
+                        <li>Collected and analyzed user comments in real YouTube videos with <b>Selenium</b></li>
+                        <li>Validated the feasibility of obtaining user interest information from user engagement data</li>
+                        <li>Proposed "Qrator", the first ABR streaming system that leverages <i>timestamps</i> and <i>likes</i> in video comments</li>
+                        <li>Publications: <a href="https://ieeexplore.ieee.org/document/9744592" class="reddy">IEEE Systems Journal '22</a></li>
+                    </ul>
+                </ul>
+            </td>
+        </tr>
+
+        <tr class="category">
+            <td>
                 <span style="font-size:20px"><b>Publications (Domestic)</b></span><br>
                 <ul>
-                    <li><span class="bluest"><b>Dongkeun Lee</b></span>, Minwoo Joo, and Wonjun Lee, "<b>Network-level Tracker Detection Using Features of Encrypted Traffic (암호화된 트래픽의 특성을 활용한 네트워크 단위 트래커 탐지 기법),</b>" <em>Journal of KIISE: Information Networking</em>, Vol. 49. No. 4, pp. 314-320, April 2022. (<span class="ifrank">Selected as an Outstanding Paper Award</span>)</li>
-                    <li><span class="bluest"><b>Dongkeun Lee</b></span>, Minwoo Joo, and Wonjun Lee, "<b>Feature Analysis of Encrypted Traffic for Network-level Tracker Detection (네트워크 단위 트래커 탐지를 위한 암호화된 트래픽의 특성 분석),</b>" in <em>Proceedings of the KIISE Korea Computer Congress 2021 (KIISE KCC2021)</em>, Jeju, Republic of Korea, June 2021, pp. 1-3. (<span class="ifrank">Selected as an Outstanding Paper Award</span>)</li>
+                    <li><span class="bluest"><b>Dongkeun Lee</b></span>, Minwoo Joo, and Wonjun Lee, "<b>Network-level Tracker Detection Using Features of Encrypted Traffic (암호화된 트래픽의 특성을 활용한 네트워크 단위 트래커 탐지 기법),</b>" <em>Journal of KIISE: Information Networking</em>, Vol. 49. No. 4, pp. 314-320, April 2022. (<span class="highlight">Selected as an Outstanding Paper Award</span>)</li>
+                    <li><span class="bluest"><b>Dongkeun Lee</b></span>, Minwoo Joo, and Wonjun Lee, "<b>Feature Analysis of Encrypted Traffic for Network-level Tracker Detection (네트워크 단위 트래커 탐지를 위한 암호화된 트래픽의 특성 분석),</b>" in <em>Proceedings of the KIISE Korea Computer Congress 2021 (KIISE KCC2021)</em>, Jeju, Republic of Korea, June 2021, pp. 1-3. (<span class="highlight">Selected as an Outstanding Paper Award</span>)</li>
                     <li><span class="bluest"><b>Dongkeun Lee</b></span>, Minwoo Joo, and Wonjun Lee, "<b>User Engagement Based Adaptive Streaming Using Timestamps in Video Comments (비디오 댓글의 타임스탬프를 활용한 사용자 참여 기반 적응적 스트리밍 기법 연구),</b>" in <em>Proceedings of the KIISE Korea Software Congress 2020 (KIISE KSC2020)</em>, Pyeongchang, Republic of Korea, December 2020, pp. 1-3.</li>
                 </ul>
             </td>
@@ -176,7 +238,7 @@
 
         <tr class="category">
             <td>
-                <span style="font-size:20px"><b>Honors and Awards</b></span><br>
+                <span style="font-size:20px" class="section"><b>Honors and Awards</b></span><br>
                 <ul>
                     <li><span style="font-size: 15px; font-weight: bold">
                         Scholarships
@@ -235,10 +297,26 @@
         <!--Update-->
         <tr>
             <td>
-            <p>Last Update: June 15, 2023</p>
+            <p>Last Update: August, 2023</p>
             </td>
         </tr>
     </table>
+
+    <script>
+        const navBarHeight = document.querySelector('.navbar').clientHeight+5;
+        function scrollToElement(targetText) {
+            const contentDivs = document.querySelectorAll('span.section');
+            contentDivs.forEach(div => {
+            if (div.textContent.includes(targetText)) {
+                const rect = div.getBoundingClientRect();
+                const scrollPosition = window.scrollY + rect.top - navBarHeight;
+                window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+            }
+        });
+        }
+        function scrollToTop() {
+            window.scrollTo({ top: -navBarHeight, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
-
